@@ -1,6 +1,6 @@
 # Rezetovina
 
--chybi: multiline input, repeat check, cteni z .txt!!
+-chybi: multiline input, repeat check, cteni z .txt
 
 
 
