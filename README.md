@@ -1,4 +1,9 @@
 # Rezetovina
+
+-chybi: multiline input, repeat check, cteni z .txt
+
+
+
 ID PWD Generator
 - Input ve formátu: ,,jméno příjmení'' (múžeš psát malá/velká a diakritiku)
 	-input po jednom
