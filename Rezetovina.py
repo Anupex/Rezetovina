@@ -40,7 +40,7 @@ def id_pwd_comb():
         print('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
         file1.write('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
 
-    file1.close
+    file1.close()
 
 
 id_pwd_comb()
