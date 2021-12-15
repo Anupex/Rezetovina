@@ -13,22 +13,29 @@ def pwd_generator():
     password = ''.join(temp)
     return password
 
-# pwd_generator()
+
 def id_generator():
 
-    jmeno_prijmeni = str(unidecode(input('zadej jmeno a prijmeni: '))).lower()
-    rozdeleno = jmeno_prijmeni.split()
-    id = rozdeleno[1] + '.' + rozdeleno[0][:2]
-    return id
+    seznam_id = []
 
-# id_generator()
+    file_vstup = open("vstup.txt", "r")
+    for vstup in file_vstup:
+        jmeno = vstup.strip('\n').split()
+        id_split = jmeno[1].lower() + '.' + jmeno[0][:2].lower()
+        seznam_id.append(id_split)
+    
+    
+    file_vstup.close()
+    return seznam_id
 
-def id_pwd():
 
+def id_pwd_comb():
     file1 = open('data.txt', 'a+')
-    file1.write('id: ' + id_generator() + ' pwd: ' + pwd_generator() + '\n')
+
+    for i in id_generator():
+        file1.write('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
+
     file1.close()
-    
-    
-while str(input('zadat jmeno? (a/n): ')).lower() == 'a':
-    id_pwd()
+
+
+id_pwd_comb()
