@@ -18,7 +18,7 @@ def id_generator():
 
     seznam_id = []
 
-    file_vstup = open("vstup.txt", "r+", encoding='utf-8')
+    file_vstup = open("vstup.txt", "r", encoding='utf-8')
 
     for vstup in file_vstup:
         jmeno = vstup.strip('\n').split()
@@ -26,7 +26,7 @@ def id_generator():
         seznam_id.append(id_split)
 
     for i in range(len(seznam_id)):
-       seznam_id[i] = unidecode(seznam_id[i])
+        seznam_id[i] = unidecode(seznam_id[i])
     
     
     file_vstup.close()
@@ -37,7 +37,7 @@ def id_pwd_comb():
     file1 = open('data.txt', 'a+')
 
     for i in id_generator():
-        print('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
+        #print('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
         file1.write('id: ' + i + ' pwd: ' + pwd_generator() + '\n')
 
     file1.close()
