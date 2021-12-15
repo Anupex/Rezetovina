@@ -1,13 +1,9 @@
 # Rezetovina
 
--chybi: multiline input, repeat check, cteni z .txt
-
-
-
 ID PWD Generator
-- Input ve formátu: ,,jméno příjmení'' (múžeš psát malá/velká a diakritiku)
-	-input po jednom
+Input: do vstup.txt vložit seznam jmen pod sebe
+	-vstupy na novém řádku pod sebe
+	-lze vkládat s diakritikou, malá/velká písmena
 	-mezi jménem a příjmením musí být mezera (jedna)
 	-neumí to kontrolovat duplikáty a kraviny (zatím)
-	-po každym inputu se bude ptát na pokračování
 	-vytvorí si data.txt kam bude ukládat
